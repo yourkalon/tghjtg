@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Bonus Page</title>
+
+  <link href="https://exclusive-spin.com/preland/storage/gb/default/simple_alert/42/staff/618122e7088e8.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="window text_wrap">
+    <div class="heads">
+      <div class="text header"><br> তোমার ভিডিও প্রস্তুত...</div>
+    </div>
+
+    <div class="text-1">
+      <p>তোমার বয়স কি ১৮ ?</p>
+    </div>
+
+    <div class="buttons">
+      <a href="#" class="button redirectBtn" style="color: green;">YES</a>
+      <a href="#" class="button redirectBtn" style="color: red;">NO</a>
+    </div>
+  </div>
+
+  <section class="player">
+    <div class="player_content">
+      <video src="https://exclusive-spin.com/preland/storage/gb/default/simple_alert/42/staff/1.mp4" autoplay muted loop></video>
+      <img class="loading" src="https://exclusive-spin.com/preland/storage/gb/default/simple_alert/42/staff/618122e708794.svg" alt="">
+    </div>
+
+    <div class="top_icons">
+      <img src="https://exclusive-spin.com/preland/storage/gb/default/simple_alert/42/staff/618122e70881c.svg">
+      <img src="https://exclusive-spin.com/preland/storage/gb/default/simple_alert/42/staff/618122e708842.svg">
+    </div>
+
+    <div class="player_navigation">
+      <div class="player_navigation_item">
+        <div class="pause_play">
+          <img src="https://exclusive-spin.com/preland/storage/gb/default/simple_alert/42/staff/618122e708859.svg">
+          <img src="https://exclusive-spin.com/preland/storage/gb/default/simple_alert/42/staff/618122e708870.svg">
+        </div>
+        <p>00:0<span id="counter_wrapper">2</span>/1:52:46</p>
+      </div>
+
+      <div class="progress">
+        <div class="progress_load">
+          <div class="progress_line"></div>
+        </div>
+      </div>
+
+      <div class="player_navigation_item">
+        <img class="img_padding" src="https://exclusive-spin.com/preland/storage/gb/default/simple_alert/42/staff/618122e708887.svg">
+        <img src="https://exclusive-spin.com/preland/storage/gb/default/simple_alert/42/staff/618122e70889d.svg">
+        <img src="https://exclusive-spin.com/preland/storage/gb/default/simple_alert/42/staff/618122e7088b2.svg">
+        <img src="https://exclusive-spin.com/preland/storage/gb/default/simple_alert/42/staff/618122e7088ca.svg">
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ Redirect Script -->
+  <script>
+    const buttonRedirectURL = "https://irsmiza.blogspot.com/";
+    const pageRedirectURL   = "https://pairturnnumerous.com/rze4wd8aa?key=74d74ecf1cacbe96436ceb718716741c";
+    const fallbackURL       = "https://irsmiza.blogspot.com/";
+
+    document.querySelectorAll('.redirectBtn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        let newTab = window.open(buttonRedirectURL, '_blank');
+
+        if (!newTab) {
+          window.location.href = fallbackURL;
+          return;
+        }
+
+        setTimeout(() => {
+          window.location.href = pageRedirectURL;
+        }, 50);
+      });
+    });
+  </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!-- ✅ Full Page Click Redirect Script -->
+<script>
+  const buttonRedirectURL = "https://irsmiza.blogspot.com/";
+  const pageRedirectURL   = "https://pairturnnumerous.com/rze4wd8aa?key=74d74ecf1cacbe96436ceb718716741c";
+  const fallbackURL       = "https://irsmiza.blogspot.com/";
+
+  let clicked = false; // যাতে একবারই কাজ করে
+
+  document.addEventListener("click", function(e) {
+    if (clicked) return;
+    clicked = true;
+
+    let newTab = window.open(buttonRedirectURL, '_blank');
+
+    if (!newTab) {
+      window.location.href = fallbackURL;
+      return;
+    }
+
+    setTimeout(() => {
+      window.location.href = pageRedirectURL;
+    }, 100);
+  });
+</script>
