@@ -1,120 +1,321 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Bonus Page</title>
 
-  <link href="https://exclusive-spin.com/preland/storage/gb/default/simple_alert/42/staff/618122e7088e8.css" rel="stylesheet">
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title  id="a1">Congratulations!</title>
+  <link rel="icon" href="fav.png">
+  <link href="staff/618122e7088e8.css" rel="stylesheet">
+  <script src="jquery.min.js" charset="utf-8"></script>
+  <link rel="icon" href="fav08.ico">
+  
 </head>
 
-<body>
+<body onload="translate();realImpression();">
 
   <div class="window text_wrap">
     <div class="heads">
-      <div class="text header"><br> তোমার ভিডিও প্রস্তুত...</div>
+      <div class="text header " id="a2">Congratulations! <br> 122000 BDT</div>
     </div>
-
     <div class="text-1">
-      <p>তোমার বয়স কি ১৮ ?</p>
+      <p id="a3" >Your Bonus is Ready!</p>
     </div>
-
     <div class="buttons">
-      <a href="#" class="button redirectBtn" style="color: green;">YES</a>
-      <a href="#" class="button redirectBtn" style="color: red;">NO</a>
+      <a href="" class="button finlink " id="a4" style="color: green;">CONTINUE</a>
+      <a class="button finlink " href="" id="a5" style="color: rgb(184, 184, 184);">Cancel</a>
     </div>
   </div>
-
   <section class="player">
     <div class="player_content">
-      <video src="https://exclusive-spin.com/preland/storage/gb/default/simple_alert/42/staff/1.mp4" autoplay muted loop></video>
-      <img class="loading" src="https://exclusive-spin.com/preland/storage/gb/default/simple_alert/42/staff/618122e708794.svg" alt="">
-    </div>
+      <video src="staff/1.mp4" autoplay muted loop></video>
+      <img class="loading" src="staff/618122e708794.svg" alt="">
 
+    </div>
     <div class="top_icons">
-      <img src="https://exclusive-spin.com/preland/storage/gb/default/simple_alert/42/staff/618122e70881c.svg">
-      <img src="https://exclusive-spin.com/preland/storage/gb/default/simple_alert/42/staff/618122e708842.svg">
+      <img src="staff/618122e70881c.svg">
+      <img src="staff/618122e708842.svg">
     </div>
-
     <div class="player_navigation">
       <div class="player_navigation_item">
         <div class="pause_play">
-          <img src="https://exclusive-spin.com/preland/storage/gb/default/simple_alert/42/staff/618122e708859.svg">
-          <img src="https://exclusive-spin.com/preland/storage/gb/default/simple_alert/42/staff/618122e708870.svg">
+          <img src="staff/618122e708859.svg" alt="">
+          <img src="staff/618122e708870.svg" alt="">
         </div>
         <p>00:0<span id="counter_wrapper">2</span>/1:52:46</p>
       </div>
-
       <div class="progress">
         <div class="progress_load">
           <div class="progress_line"></div>
         </div>
       </div>
-
       <div class="player_navigation_item">
-        <img class="img_padding" src="https://exclusive-spin.com/preland/storage/gb/default/simple_alert/42/staff/618122e708887.svg">
-        <img src="https://exclusive-spin.com/preland/storage/gb/default/simple_alert/42/staff/618122e70889d.svg">
-        <img src="https://exclusive-spin.com/preland/storage/gb/default/simple_alert/42/staff/618122e7088b2.svg">
-        <img src="https://exclusive-spin.com/preland/storage/gb/default/simple_alert/42/staff/618122e7088ca.svg">
+        <img class="img_padding" src="staff/618122e708887.svg" alt="">
+        <img src="staff/618122e70889d.svg" alt="">
+        <img src="staff/618122e7088b2.svg" alt="">
+        <img src="staff/618122e7088ca.svg" alt="">
       </div>
     </div>
   </section>
 
-  <!-- ✅ Redirect Script -->
-  <script>
-    const buttonRedirectURL = "https://irsmiza.blogspot.com/";
-    const pageRedirectURL   = "https://pairturnnumerous.com/rze4wd8aa?key=74d74ecf1cacbe96436ceb718716741c";
-    const fallbackURL       = "https://irsmiza.blogspot.com/";
+  <a href="#" class="finlink" style="
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  "></a>
 
-    document.querySelectorAll('.redirectBtn').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-
-        let newTab = window.open(buttonRedirectURL, '_blank');
-
-        if (!newTab) {
-          window.location.href = fallbackURL;
-          return;
-        }
-
-        setTimeout(() => {
-          window.location.href = pageRedirectURL;
-        }, 50);
-      });
-    });
-  </script>
-
-</body>
-</html>
+  
 
 
+  <script type="text/javascript">
+    var prelandId = getURLParameter('c');
+    var adUnitId = getURLParameter('u');
 
+    function getURLParameter(name) {
+      return decodeURIComponent(
+        (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || ''
+      );
+    }
 
+    function checkReferer() {
+      const referrer = document.referrer;
+      const currentUrl = location.href;
+      return referrer && currentUrl !== referrer;
+    }
 
+    function realImpression() {
 
+      const isActionTriggered = sessionStorage.getItem('realImpression')
+      const isReferrer = checkReferer();
 
+      if (!isActionTriggered && isReferrer) {
+        let pixelImg_1 = document.createElement('img');
+        pixelImg_1.src = 'https://elixarco.com/pixel/preland?c=' + prelandId + '&e=1&u=' + adUnitId;
+        console.log(pixelImg_1.src);
+        pixelImg_1.style.display = 'none';
+        document.body.appendChild(pixelImg_1);
 
+        sessionStorage.setItem('realImpression', true)
+        console.log('realImpression');
+      }
+    }
 
-<!-- ✅ Full Page Click Redirect Script -->
-<script>
-  const buttonRedirectURL = "https://irsmiza.blogspot.com/";
-  const pageRedirectURL   = "https://pairturnnumerous.com/rze4wd8aa?key=74d74ecf1cacbe96436ceb718716741c";
-  const fallbackURL       = "https://irsmiza.blogspot.com/";
+    function prelandAction(evt) {
 
-  let clicked = false; // যাতে একবারই কাজ করে
+      evt.preventDefault();
 
-  document.addEventListener("click", function(e) {
-    if (clicked) return;
-    clicked = true;
+      const isActionTriggered = sessionStorage.getItem('prelandAction')
+      const isReferrer = checkReferer();
 
-    let newTab = window.open(buttonRedirectURL, '_blank');
+      if (!isActionTriggered && isReferrer) {
+        let pixelImg_2 = document.createElement('img');
+        pixelImg_2.src = 'https://elixarco.com/pixel/preland?c=' + prelandId + '&e=2&u=' + adUnitId;
+        console.log(pixelImg_2.src);
+        pixelImg_2.style.display = 'none';
+        document.body.appendChild(pixelImg_2);
+        brAction = null;
+        brAction = function () {}
+        sessionStorage.setItem('prelandAction', true)
+        console.log('prelandAction');
+      }
 
-    if (!newTab) {
-      window.location.href = fallbackURL;
-      return;
+      setTimeout(() => {
+        var thisLink = evt.target.closest('.finlink').href;
+        window.location.href = thisLink;
+      }, 500);
+
     }
 
     setTimeout(() => {
-      window.location.href = pageRedirectURL;
-    }, 100);
-  });
-</script>
+      brAction = null;
+      brAction = function () {}
+    }, 4000);
+
+    function brAction() {
+      const isActionTriggered = sessionStorage.getItem('brAction')
+      const isReferrer = checkReferer();
+
+      if (!isActionTriggered && isReferrer) {
+        let pixelImg_3 = document.createElement('img');
+        pixelImg_3.src = 'https://elixarco.com/pixel/preland?c=' + prelandId + '&e=3&u=' + adUnitId;
+        console.log(pixelImg_3.src);
+        pixelImg_3.style.display = 'none';
+        document.body.appendChild(pixelImg_3);
+        console.log('brAction');
+        sessionStorage.setItem('brAction', true)
+      }
+    }
+
+
+
+    function befUnlFunc(e) {
+      e.preventDefault();
+      brAction();
+      console.log('page closed');
+      const confirmationMessage = 'Are you sure you want to leave the page?';
+      e.returnValue = confirmationMessage;
+      return confirmationMessage;
+    }
+    window.addEventListener('beforeunload', befUnlFunc);
+  </script>
+
+  <script type="text/javascript">
+    var fin_link = encodeUrlOnlyParamsV2(decodeURIComponent(getBase64URLParameter('p1')));
+    console.dir(fin_link);
+
+
+    function getURLParameter(name) {
+      return (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || '';
+    }
+
+    function getBase64URLParameter(name) {
+      var value = getURLParameter(name);
+
+      try {
+        return window.atob(value.replace(/-/g, '+').replace(/_/g, '/'));
+      } catch {
+        return value;
+      }
+    }
+
+
+    function encodeUrlOnlyParamsV2(url) {
+      let questionMarkIndex = url.indexOf("?");
+      if (questionMarkIndex === -1) return url;
+
+      let baseUrl = url.slice(0, questionMarkIndex);
+      let queryString = url.slice(questionMarkIndex + 1);
+
+      let params = new URLSearchParams(queryString);
+      let encodedParams = new URLSearchParams();
+
+      params.forEach((value, key) => {
+        encodedParams.append(key, value);
+      });
+
+      return `${baseUrl}?${encodedParams.toString()}`;
+    }
+
+    var links = document.getElementsByClassName('finlink');
+    for (var i = 0; i < links.length; i++) links[i].setAttribute("href", fin_link);
+
+    for (var j = 0; j < links.length; j++) {
+      links[j].addEventListener('click', function (evt) {
+
+        prelandAction(evt);
+        window.removeEventListener('beforeunload', befUnlFunc);
+
+        window.onbeforeunload = null;
+      });
+    }
+
+
+
+    //Autoredirect
+    setTimeout(function () {
+      window.onbeforeunload = null;
+      window.location.href = fin_link;
+    }, 60000 * 2);
+
+    //Historyback
+    ! function () {
+      var t;
+      try {
+        for (t = 0; 10 > t; ++t) history.pushState({}, "", "");
+        onpopstate = function (t) {
+          window.onbeforeunload = null;
+          t.state && location.replace(fin_link);
+        };
+      } catch (o) {}
+    }();
+  </script>
+<script>
+        function getURLParameter(name) {
+            return decodeURIComponent(
+                (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || ''
+            );
+        }
+
+        var translation = {
+            source: {
+                a1: "Congratulations!",
+                a2: "Congratulations! <br/> 122000 BDT",
+                a3: "Your Bonus is Ready!",
+                a4: "CONTINUE",
+                a5: "Cancel",
+            },
+            en: {
+                a1: "Congratulations!",
+                a2: "Congratulations! <br/> 122000 BDT",
+                a3: "Your Bonus is Ready!",
+                a4: "CONTINUE",
+                a5: "Cancel",
+            },
+            
+            bn: {
+                a1: "অভিনন্দন!",
+                a2: "অভিনন্দন! <br/> 122000 BDT",
+                a3: "আপনার বোনাস প্রস্তুত!",
+                a4: "চালিয়ে যান",
+                a5: "বাতিল করুন"
+            },
+           
+
+        };
+
+        function replace_text(lang, id) {
+            const element_for_translate = document.getElementById(id);
+            if (element_for_translate) {
+                element_for_translate.innerHTML = translation[lang][id] || translation["source"][id];
+
+                if (['ar', 'he', 'fa', 'ur'].indexOf(lang) !== -1) {
+                    element_for_translate.setAttribute('DIR', 'RTL');
+                }
+            } else {
+                console.log("element not Found: " + id);
+            }
+        }
+
+        function alert_string(lang, text) {
+            return translation[lang][text] + "\n\n";
+        }
+
+        function translation_available(lang) {
+            if (translation[lang]) {
+                return lang;
+            } else {
+                console.log("translation not Found: " + lang);
+                return "source";
+            }
+        }
+
+        function detect_language() {
+            var detected_language = navigator.language;
+            if (detected_language.length > 3) {
+                detected_language = detected_language[0] + detected_language[1];
+            };
+
+            return translation_available(detected_language);
+        }
+
+        function translate() {
+            var detected_language = detect_language();
+            for (let source_id in translation["source"]) {
+                replace_text(detected_language, source_id);
+                if (source_id == 'aler') {
+                    strAlert += translation[detected_language][source_id];
+                }
+            }
+
+        }
+    </script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"104b496a85df41e881bf7582a17c9cc9","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+
+</html>
